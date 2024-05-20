@@ -1,7 +1,15 @@
+import { useState } from "react";
+import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
+
 export default function App() {
+  const [todos, setTodos] = useState([
+    { id: "0", title: "test title", content: "test content", isDone: false },
+  ]);
   return (
     <>
-      <h1>투두리스트 타임어택</h1>
+      <TodoForm todos={todos} setTodos={setTodos} />
+      <TodoList todos={todos} setTodos={setTodos} />
     </>
   );
 }
