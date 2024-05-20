@@ -16,6 +16,7 @@ export default function App() {
         onSubmit={(e) => {
           e.preventDefault();
           e.target[0].value = "";
+          setInput("");
         }}
       >
         <input
